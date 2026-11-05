@@ -4,7 +4,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <meta name="theme-color" content="#080b12" />
-    <title>StreamVerse TV</title>
+    <title>StreamVerse TV — Android Mobile &amp; TV</title>
+    <meta name="description" content="StreamVerse for Android Mobile and Android TV. Public APK downloads and app information from Captain Global Technologies." />
+    <link rel="canonical" href="https://goddiewayne.github.io/" />
     <style>
       :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; }
       * { box-sizing: border-box; }
@@ -13,7 +15,8 @@
       .mark { width: 72px; height: 72px; margin: auto; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(145deg, #25d8ff, #7158ff); box-shadow: 0 20px 70px #1fcbea4d; font-size: 34px; }
       h1 { margin: 26px 0 12px; font-size: clamp(34px, 8vw, 58px); letter-spacing: -.055em; }
       p { color: #aebdca; font-size: 18px; line-height: 1.6; }
-      a { display: inline-flex; margin-top: 18px; padding: 14px 22px; border-radius: 999px; background: #25d8ff; color: #051017; text-decoration: none; font-weight: 800; }
+      small { display: block; margin-top: 24px; color: #aebdca; line-height: 1.6; }
+      a { margin-right: 8px; display: inline-flex; margin-top: 18px; padding: 14px 22px; border-radius: 999px; background: #25d8ff; color: #051017; text-decoration: none; font-weight: 800; }
     </style>
   </head>
   <body>
@@ -21,7 +24,37 @@
       <div class="mark" aria-hidden="true">▶</div>
       <h1>StreamVerse TV</h1>
       <p>Live television, tuned for Android Mobile and Android TV.</p>
-      <a href="https://github.com/Goddiewayne/StreamVerse-TV/releases">Get StreamVerse</a>
+      <div aria-label="Android downloads">
+        <a id="download-phone" href="https://goddiewayne.github.io/streamverse-data/release/StreamVerse-Phone-v1.9.51-release.apk">Download for Mobile</a>
+        <a id="download-tv" href="https://goddiewayne.github.io/streamverse-data/release/StreamVerse-TV-v1.9.51-release.apk">Download for TV</a>
+      </div>
+      <small id="release-status">Public release 1.9.51 · Android APK downloads</small>
+      <small>Browse channels and programme guides, save favourites and pair your phone as a TV remote. Channel availability depends on the source, your location and any required account.</small>
+      <small>Provided by Captain Global Technologies. Content remains the property of its respective owners; the app does not grant rights to third-party broadcasts.</small>
+      <small>For privacy choices and the full app notice, open Settings → Privacy &amp; viewer support in the app. This website has no advertising or analytics scripts.</small>
     </main>
+    <script>
+      // Read the existing public release feed; never point visitors at the private app repository.
+      (async function () {
+        const controller = new AbortController();
+        const timer = setTimeout(() => controller.abort(), 5000);
+        try {
+          const response = await fetch("https://goddiewayne.github.io/streamverse-data/release/version.json", { signal: controller.signal, cache: "no-cache" });
+          if (!response.ok) return;
+          const data = await response.json();
+          if (!/^\d+\.\d+\.\d+(?:[.-][0-9A-Za-z.-]+)?$/.test(data.versionName)) return;
+          const downloads = [["phone", "com.streamverse.app", "download-phone"], ["tv", "com.streamverse.tv", "download-tv"]].map(([key, packageName, id]) => {
+            const apk = data.apks && data.apks[key];
+            if (!apk || apk.packageName !== packageName) throw new Error("Unexpected package");
+            const url = new URL(apk.url);
+            if (url.origin !== location.origin || !url.pathname.startsWith("/streamverse-data/release/") || !url.pathname.endsWith(".apk") || url.search || url.hash) throw new Error("Unexpected download host");
+            return [id, url.href];
+          });
+          downloads.forEach(([id, url]) => { document.getElementById(id).href = url; });
+          document.getElementById("release-status").textContent = "Public release " + data.versionName + " · Android APK downloads";
+        } catch (_) { /* The independently checked public downloads remain available offline. */ }
+        finally { clearTimeout(timer); }
+      })();
+    </script>
   </body>
 </html>

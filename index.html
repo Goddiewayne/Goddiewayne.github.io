@@ -1,60 +1,111 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <meta name="theme-color" content="#080b12" />
-    <title>StreamVerse TV — Android Mobile &amp; TV</title>
-    <meta name="description" content="StreamVerse for Android Mobile and Android TV. Public APK downloads and app information from Captain Global Technologies." />
-    <link rel="canonical" href="https://goddiewayne.github.io/" />
-    <style>
-      :root { color-scheme: dark; font-family: Inter, system-ui, sans-serif; }
-      * { box-sizing: border-box; }
-      body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: radial-gradient(circle at 50% 10%, #132c42 0, #080b12 48%, #040508 100%); color: #f5fbff; }
-      main { width: min(620px, calc(100% - 40px)); text-align: center; padding: 52px 28px; }
-      .mark { width: 72px; height: 72px; margin: auto; display: grid; place-items: center; border-radius: 22px; background: linear-gradient(145deg, #25d8ff, #7158ff); box-shadow: 0 20px 70px #1fcbea4d; font-size: 34px; }
-      h1 { margin: 26px 0 12px; font-size: clamp(34px, 8vw, 58px); letter-spacing: -.055em; }
-      p { color: #aebdca; font-size: 18px; line-height: 1.6; }
-      small { display: block; margin-top: 24px; color: #aebdca; line-height: 1.6; }
-      a { margin-right: 8px; display: inline-flex; margin-top: 18px; padding: 14px 22px; border-radius: 999px; background: #25d8ff; color: #051017; text-decoration: none; font-weight: 800; }
-    </style>
-  </head>
-  <body>
-    <main>
-      <div class="mark" aria-hidden="true">▶</div>
-      <h1>StreamVerse TV</h1>
-      <p>Live television, tuned for Android Mobile and Android TV.</p>
-      <div aria-label="Android downloads">
-        <a id="download-phone" href="https://goddiewayne.github.io/streamverse-data/release/StreamVerse-Phone-v1.9.51-release.apk">Download for Mobile</a>
-        <a id="download-tv" href="https://goddiewayne.github.io/streamverse-data/release/StreamVerse-TV-v1.9.51-release.apk">Download for TV</a>
-      </div>
-      <small id="release-status">Public release 1.9.51 · Android APK downloads</small>
-      <small>Browse channels and programme guides, save favourites and pair your phone as a TV remote. Channel availability depends on the source, your location and any required account.</small>
-      <small>Provided by Captain Global Technologies. Content remains the property of its respective owners; the app does not grant rights to third-party broadcasts.</small>
-      <small>For privacy choices and the full app notice, open Settings → Privacy &amp; viewer support in the app. This website has no advertising or analytics scripts.</small>
-    </main>
-    <script>
-      // Read the existing public release feed; never point visitors at the private app repository.
-      (async function () {
-        const controller = new AbortController();
-        const timer = setTimeout(() => controller.abort(), 5000);
-        try {
-          const response = await fetch("https://goddiewayne.github.io/streamverse-data/release/version.json", { signal: controller.signal, cache: "no-cache" });
-          if (!response.ok) return;
-          const data = await response.json();
-          if (!/^\d+\.\d+\.\d+(?:[.-][0-9A-Za-z.-]+)?$/.test(data.versionName)) return;
-          const downloads = [["phone", "com.streamverse.app", "download-phone"], ["tv", "com.streamverse.tv", "download-tv"]].map(([key, packageName, id]) => {
-            const apk = data.apks && data.apks[key];
-            if (!apk || apk.packageName !== packageName) throw new Error("Unexpected package");
-            const url = new URL(apk.url);
-            if (url.origin !== location.origin || !url.pathname.startsWith("/streamverse-data/release/") || !url.pathname.endsWith(".apk") || url.search || url.hash) throw new Error("Unexpected download host");
-            return [id, url.href];
-          });
-          downloads.forEach(([id, url]) => { document.getElementById(id).href = url; });
-          document.getElementById("release-status").textContent = "Public release " + data.versionName + " · Android APK downloads";
-        } catch (_) { /* The independently checked public downloads remain available offline. */ }
-        finally { clearTimeout(timer); }
-      })();
-    </script>
-  </body>
-</html>
+<!DOCTYPE html><html lang="en"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="image" href="/brand-symbol.svg"/><link rel="preload" as="image" href="/brand-wordmark.png"/><link rel="stylesheet" href="/assets/index-BTtvnc62.css" data-rsc-css-href="/assets/index-BTtvnc62.css" data-precedence="vite-rsc/importer-resources"/><link rel="stylesheet" href="/assets/Viewer-De87GCp5.css" data-precedence="vite-rsc/client-reference"/><link rel="modulepreload" href="/assets/layout-segment-context-BQXlNDHz.js" crossorigin=""/><link rel="modulepreload" href="/assets/rolldown-runtime-S-ySWqyJ.js" crossorigin=""/><link rel="modulepreload" href="/assets/index-C4WCD9Rv.js" crossorigin=""/><link rel="modulepreload" href="/assets/framework-CXnKph_e.js" crossorigin=""/><link rel="modulepreload" href="/assets/Viewer-DnF_n5O3.js" crossorigin=""/><link rel="modulepreload" href="/assets/browser-media-CW2lrhZL.js" crossorigin=""/><title>StreamVerse · Live TV &amp; Radio</title><meta name="description" content="Your channels. Your world. Watch live television and listen to radio with StreamVerse."/><link rel="shortcut icon" href="/favicon.svg"/><link rel="icon" href="/favicon.svg"/><link rel="apple-touch-icon" href="/icons/apple-touch-icon.png"/><link rel="manifest" href="/manifest.webmanifest"/><meta name="mobile-web-app-capable" content="yes"/><meta name="apple-mobile-web-app-title" content="StreamVerse"/><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/><meta name="theme-color" content="#101218"/><script>self.__VINEXT_RSC_PARAMS__={}</script><script>self.__VINEXT_RSC_NAV__={"pathname":"/","searchParams":[]}</script><link rel="modulepreload" href="/assets/index-C4WCD9Rv.js" />
+<style data-vinext-fonts>/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-8ac0455e797f/geist-ff2310f5.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-8ac0455e797f/geist-875ccdd4.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-8ac0455e797f/geist-52306abf.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-8ac0455e797f/geist-001175b1.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-8ac0455e797f/geist-98bbbccb.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_0om6vy4 { font-family: 'Geist', sans-serif; }
+
+.__variable_geist_0om6vy4 { --font-geist-sans: 'Geist', sans-serif; }
+
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-mono-00e989178794/geist-mono-f6b33328.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-mono-00e989178794/geist-mono-44e03052.woff2) format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* symbols2 */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-mono-00e989178794/geist-mono-0638449e.woff2) format('woff2');
+  unicode-range: U+2000-2001, U+2004-2008, U+200A, U+23B8-23BD, U+2500-259F;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-mono-00e989178794/geist-mono-971fb274.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-mono-00e989178794/geist-mono-44745446.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C4, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Geist Mono';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url(C:/Projects/StreamVerse TV/website/.vinext/fonts/geist-mono-00e989178794/geist-mono-013b2f2f.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+.__font_geist_mono_0rrkv09 { font-family: 'Geist Mono', sans-serif; }
+
+.__variable_geist_mono_0rrkv09 { --font-geist-mono: 'Geist Mono', sans-serif; }
+</style>
+</head><body class="__variable_geist_0om6vy4 __variable_geist_mono_0rrkv09 antialiased"><div class="sv-app sv-native sv-is-home "><a href="#channels" class="sv-skip">Skip to channels</a><aside class="sv-sidebar"><button class="sv-rail-brand" aria-label="StreamVerse home"><img src="/brand-symbol.svg" alt=""/></button><nav aria-label="Main navigation"><button disabled="" class="" aria-label="Home" title="Home" aria-current="page"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 10 9-7 9 7M5 9v11h14V9M9 20v-7h6v7"></path></svg><span>Home</span></button><button disabled="" class="" aria-label="Schedule" title="Schedule"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 5h14a2 2 0 0 1 2 2v13H3V7a2 2 0 0 1 2-2M7 2v6M17 2v6M3 11h18M7 15h2M12 15h2M7 18h2"></path></svg><span>Schedule</span></button><button disabled="" class="" aria-label="Search" title="Search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"></path></svg><span>Search</span></button><button disabled="" class="" aria-label="My Channels" title="My Channels"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1.1-1.1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8"></path></svg><span>My Channels</span></button><button disabled="" class="" aria-label="Settings" title="Settings"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m9 3-1 3-3 1-2 3 2 3v3l3 2 2 3 3-2h3l2-3 3-2-2-3v-3l-3-2-2-3-3 2ZM15.5 12a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0"></path></svg><span>Settings</span></button><button disabled="" class="sv-tv-destination" aria-label="TV Guide" title="TV Guide"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v14H3ZM7 2l5 5 5-5M7 11h4M7 15h4M15 11h3M15 15h3"></path></svg><span>TV Guide</span></button><button disabled="" class="sv-tv-destination" aria-label="Recently watched" title="Recently watched"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-7M3 3v6h6M12 7v6l4 2"></path></svg><span>Recent</span></button><button disabled="" class="sv-tv-destination" aria-label="Radio" title="Radio"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 7 13-5M3 8h18v13H3ZM6 12h12M7 16v2M16 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path></svg><span>Radio</span></button></nav></aside><div class="sv-main"><header class="sv-topbar"><button class="sv-mobile-brand" aria-label="StreamVerse home"><span class="sv-native-brand "><img src="/brand-symbol.svg" alt=""/><img src="/brand-wordmark.png" alt="StreamVerse"/></span></button><span class="sv-screen-title">CHANNEL SURF</span><div class="sv-topbar-actions"><div class="sv-install-status" data-offline-shell="pending"></div><time class="sv-clock"></time><button class="sv-header-search" aria-label="Open channel search"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 21l-5-5M18 10a8 8 0 1 1-16 0 8 8 0 0 1 16 0"></path></svg></button><button class="sv-refresh-icon" aria-label="Refresh catalogue">↻</button></div></header><section data-playback-phase="idle" data-session-generation="0" class="sv-player  " aria-label="Playback"><div class="sv-stage"><div class="sv-connection " aria-hidden="true"></div></div><div class="sv-player-info"><div><span class="sv-eyebrow">STREAMVERSE</span><h2>Choose a channel</h2><p role="status">Choose a channel to start watching</p></div></div></section><main id="channels" class="sv-content"><div class="sv-tv-catalogue-header"><h2>ALL CHANNELS <span>(<!-- -->0<!-- -->)</span></h2><div><button>A → Z</button><button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 8v7l-4 2v-9Z"></path></svg>Filters</button></div></div><p class="sv-catalogue-status" role="status">Loading channels…</p><div class="sv-native-discovery"><header class="sv-home-greeting"><h1>Good Afternoon</h1><p>Find your next great watch.</p></header><div class="sv-discovery-shortcuts"><button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7h18v14H3ZM7 2l5 5 5-5M7 11h4M7 15h4M15 11h3M15 15h3"></path></svg><strong>TV Guide</strong><small>On now &amp; next</small></button><button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18m0 4 4 3-2 5h-4l-2-5ZM4 9l4 1M16 10l4-1M7 19l3-4M17 19l-3-4"></path></svg><strong>Sports</strong><small>Find a channel</small></button><button><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 7 13-5M3 8h18v13H3ZM6 12h12M7 16v2M16 15a2 2 0 1 0 0 4 2 2 0 0 0 0-4"></path></svg><strong>Radio</strong><small>Press play</small></button></div><div class="sv-spotlight-label"><span>IN THE SPOTLIGHT</span></div><section class="sv-home-loading" role="status">Channels will appear here when the catalogue is ready.</section><div class="sv-native-shelves"></div></div><div class="sv-empty"><button>Refresh channels</button></div></main><footer class="sv-footer"><span class="sv-tv-key-hints"><kbd>↑ ↓ ← →</kbd> Browse channels <kbd>OK</kbd> Tune <kbd>♡</kbd> <!-- -->Save</span><span>0<!-- --> channels</span></footer></div></div><script id="_R_">import("/assets/index-C4WCD9Rv.js")</script></body></html><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("2:I[\"8c0f216c4604\",[],\"Children\",1]\n3:I[\"15c18cfaeeff\",[],\"LayoutSegmentProvider\",1]\n4:I[\"8c0f216c4604\",[],\"Slot\",1]\n5:I[\"593f344dc510\",[],\"RedirectBoundary\",1]\n:HL[\"/assets/index-BTtvnc62.css\",\"style\"]\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("0:{\"__route\":\"route:/\",\"__interceptionContext\":null,\"__layoutIds\":[\"layout:/\"],\"__rootLayout\":\"/\",\"page:/\":\"$L1\",\"layout:/\":[[[[\"$\",\"link\",\"css:/assets/index-BTtvnc62.css\",{\"rel\":\"stylesheet\",\"precedence\":\"vite-rsc/importer-resources\",\"href\":\"/assets/index-BTtvnc62.css\",\"data-rsc-css-href\":\"/assets/index-BTtvnc62.css\"}],\"$undefined\"],[\"$\",\"html\",null,{\"lang\":\"en\",\"children\":[\"$\",\"body\",null,{\"className\":\"__variable_geist_0om6vy4 __variable_geist_mono_0rrkv09 antialiased\",\"children\":[\"$\",\"$L2\",null,{}]}]}]],null],\"route:/\":[[[\"$\",\"meta\",null,{\"charSet\":\"utf-8\"}],[[\"$\",\"title\",\"0\",{\"children\":\"StreamVerse · Live TV \u0026 Radio\"}],[\"$\",\"meta\",\"1\",{\"name\":\"description\",\"content\":\"Your channels. Your world. Watch live television and listen to radio with StreamVerse.\"}],[\"$\",\"link\",\"2\",{\"rel\":\"shortcut icon\",\"href\":\"/favicon.svg\"}],[\"$\",\"link\",\"3\",{\"rel\":\"icon\",\"href\":\"/favicon.svg\"}],[\"$\",\"link\",\"4\",{\"rel\":\"apple-touch-icon\",\"href\":\"/icons/apple-touch-icon.png\"}],[\"$\",\"link\",\"5\",{\"rel\":\"manifest\",\"href\":\"/manifest.webmanifest\"}],[\"$\",\"meta\",\"6\",{\"name\":\"mobile-web-app-capable\",\"content\":\"yes\"}],[\"$\",\"meta\",\"7\",{\"name\":\"apple-mobile-web-app-title\",\"content\":\"StreamVerse\"}],[\"$\",\"meta\",\"8\",{\"name\":\"apple-mobile-web-app-status-bar-style\",\"content\":\"black-translucent\"}]],[[\"$\",\"meta\",\"0\",{\"name\":\"viewport\",\"content\":\"width=device-width, initial-scale=1\"}],[\"$\",\"meta\",\"1\",{\"name\":\"theme-color\",\"content\":\"#101218\"}]]],[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"layout:/\",\"parallelSlots\":\"$undefined\",\"children\":[\"$\",\"$L5\",null,{\"children\":[\"$\",\"$L3\",null,{\"segmentMap\":{\"children\":[]},\"children\":[\"$\",\"$L4\",null,{\"id\":\"page:/\"}]}]}]}]}]],\"__layoutFlags\":{\"layout:/\":\"s\"},\"__artifactCompatibility\":{\"schemaVersion\":1,\"graphVersion\":\"app-route-graph:4uhn5s1wvoptc\",\"deploymentVersion\":\"e45619f0-b64c-4390-a600-2618fe7cb4b7\",\"appElementsSchemaVersion\":1,\"rscPayloadSchemaVersion\":1,\"rootBoundaryId\":\"/\",\"renderEpoch\":null}}\n")</script><script>self.__VINEXT_RSC_CHUNKS__=self.__VINEXT_RSC_CHUNKS__||[];self.__VINEXT_RSC_CHUNKS__.push("6:I[\"e20b90600194\",[],\"Viewer\",1]\n1:[\"$\",\"$L6\",null,{}]\n")</script><script>self.__VINEXT_RSC_DONE__=true</script>

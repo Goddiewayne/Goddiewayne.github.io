@@ -1,0 +1,122 @@
+{
+  "_browser-media-DpqMIg8t.js": {
+    "file": "assets/browser-media-DpqMIg8t.js",
+    "name": "browser-media",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry"
+    ],
+    "dynamicImports": [
+      "node_modules/shaka-player/dist/shaka-player.compiled.js"
+    ]
+  },
+  "_catalogue-client-CjQKROlo.js": {
+    "file": "assets/catalogue-client-CjQKROlo.js",
+    "name": "catalogue-client",
+    "imports": [
+      "_browser-media-DpqMIg8t.js"
+    ]
+  },
+  "_framework-CXnKph_e.js": {
+    "file": "assets/framework-CXnKph_e.js",
+    "name": "framework",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js"
+    ]
+  },
+  "_media-journey-C9gpGNwX.css": {
+    "file": "assets/media-journey-C9gpGNwX.css",
+    "src": "_media-journey-C9gpGNwX.css"
+  },
+  "_playback-session-Dy9CcT1a.js": {
+    "file": "assets/playback-session-Dy9CcT1a.js",
+    "name": "playback-session"
+  },
+  "_rolldown-runtime-S-ySWqyJ.js": {
+    "file": "assets/rolldown-runtime-S-ySWqyJ.js",
+    "name": "rolldown-runtime"
+  },
+  "app/verification/media/MediaJourney.tsx": {
+    "file": "assets/MediaJourney-DXJB6OS8.js",
+    "name": "MediaJourney",
+    "src": "app/verification/media/MediaJourney.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_browser-media-DpqMIg8t.js",
+      "_playback-session-Dy9CcT1a.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/media-journey-C9gpGNwX.css"
+    ]
+  },
+  "app/verification/sources/SourceJourney.tsx": {
+    "file": "assets/SourceJourney-CBTsbe5p.js",
+    "name": "SourceJourney",
+    "src": "app/verification/sources/SourceJourney.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_browser-media-DpqMIg8t.js",
+      "_catalogue-client-CjQKROlo.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/media-journey-C9gpGNwX.css"
+    ]
+  },
+  "app/viewer/Viewer.tsx": {
+    "file": "assets/Viewer-Dp2393Oq.js",
+    "name": "Viewer",
+    "src": "app/viewer/Viewer.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_browser-media-DpqMIg8t.js",
+      "_catalogue-client-CjQKROlo.js",
+      "_playback-session-Dy9CcT1a.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/Viewer-CjqOP23L.css"
+    ]
+  },
+  "node_modules/shaka-player/dist/shaka-player.compiled.js": {
+    "file": "assets/shaka-player.compiled-C4PpWR9m.js",
+    "name": "shaka-player.compiled",
+    "src": "node_modules/shaka-player/dist/shaka-player.compiled.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js"
+    ]
+  },
+  "node_modules/vinext/dist/shims/layout-segment-context.js": {
+    "file": "assets/layout-segment-context-BkwspuxW.js",
+    "name": "layout-segment-context",
+    "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "virtual:vinext-app-browser-entry",
+      "_framework-CXnKph_e.js"
+    ]
+  },
+  "virtual:vinext-app-browser-entry": {
+    "file": "assets/index-CACYdaum.js",
+    "name": "index",
+    "src": "virtual:vinext-app-browser-entry",
+    "isEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "dynamicImports": [
+      "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "virtual:vinext-app-browser-entry",
+      "app/verification/media/MediaJourney.tsx",
+      "app/verification/sources/SourceJourney.tsx",
+      "app/viewer/Viewer.tsx"
+    ]
+  }
+}

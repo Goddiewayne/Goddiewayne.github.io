@@ -1,6 +1,6 @@
 {
-  "_browser-media-ByJPgL9b.js": {
-    "file": "assets/browser-media-ByJPgL9b.js",
+  "_browser-media-B9PeLELA.js": {
+    "file": "assets/browser-media-B9PeLELA.js",
     "name": "browser-media",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
@@ -10,11 +10,11 @@
       "node_modules/shaka-player/dist/shaka-player.compiled.js"
     ]
   },
-  "_catalogue-client-BHww8ohH.js": {
-    "file": "assets/catalogue-client-BHww8ohH.js",
+  "_catalogue-client-DE-5ZWeY.js": {
+    "file": "assets/catalogue-client-DE-5ZWeY.js",
     "name": "catalogue-client",
     "imports": [
-      "_browser-media-ByJPgL9b.js"
+      "_browser-media-B9PeLELA.js"
     ]
   },
   "_framework-CXnKph_e.js": {
@@ -28,23 +28,43 @@
     "file": "assets/media-journey-C9gpGNwX.css",
     "src": "_media-journey-C9gpGNwX.css"
   },
-  "_playback-session-BOyLntIz.js": {
-    "file": "assets/playback-session-BOyLntIz.js",
+  "_playback-recovery-DkOo1JgC.js": {
+    "file": "assets/playback-recovery-DkOo1JgC.js",
+    "name": "playback-recovery"
+  },
+  "_playback-session-CWY54DOh.js": {
+    "file": "assets/playback-session-CWY54DOh.js",
     "name": "playback-session"
   },
   "_rolldown-runtime-S-ySWqyJ.js": {
     "file": "assets/rolldown-runtime-S-ySWqyJ.js",
     "name": "rolldown-runtime"
   },
+  "app/event-player/EventPlayer.tsx": {
+    "file": "assets/EventPlayer-N03mi1K4.js",
+    "name": "EventPlayer",
+    "src": "app/event-player/EventPlayer.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_browser-media-B9PeLELA.js",
+      "_playback-recovery-DkOo1JgC.js",
+      "_playback-session-CWY54DOh.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/EventPlayer-DTd2dFdv.css"
+    ]
+  },
   "app/verification/media/MediaJourney.tsx": {
-    "file": "assets/MediaJourney-C_olT_wl.js",
+    "file": "assets/MediaJourney-MAL6_VnJ.js",
     "name": "MediaJourney",
     "src": "app/verification/media/MediaJourney.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_browser-media-ByJPgL9b.js",
-      "_playback-session-BOyLntIz.js",
+      "_browser-media-B9PeLELA.js",
+      "_playback-session-CWY54DOh.js",
       "_framework-CXnKph_e.js"
     ],
     "css": [
@@ -52,14 +72,14 @@
     ]
   },
   "app/verification/sources/SourceJourney.tsx": {
-    "file": "assets/SourceJourney-CjRSSvdc.js",
+    "file": "assets/SourceJourney-BFMtYJtg.js",
     "name": "SourceJourney",
     "src": "app/verification/sources/SourceJourney.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_browser-media-ByJPgL9b.js",
-      "_catalogue-client-BHww8ohH.js",
+      "_browser-media-B9PeLELA.js",
+      "_catalogue-client-DE-5ZWeY.js",
       "_framework-CXnKph_e.js"
     ],
     "css": [
@@ -67,23 +87,24 @@
     ]
   },
   "app/viewer/Viewer.tsx": {
-    "file": "assets/Viewer-Cp841HlS.js",
+    "file": "assets/Viewer-C_mqqm4T.js",
     "name": "Viewer",
     "src": "app/viewer/Viewer.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_browser-media-ByJPgL9b.js",
-      "_catalogue-client-BHww8ohH.js",
-      "_playback-session-BOyLntIz.js",
+      "_browser-media-B9PeLELA.js",
+      "_catalogue-client-DE-5ZWeY.js",
+      "_playback-recovery-DkOo1JgC.js",
+      "_playback-session-CWY54DOh.js",
       "_framework-CXnKph_e.js"
     ],
     "css": [
-      "assets/Viewer-BPQg2sbX.css"
+      "assets/Viewer-CuVrF80o.css"
     ]
   },
   "node_modules/shaka-player/dist/shaka-player.compiled.js": {
-    "file": "assets/shaka-player.compiled-C4PpWR9m.js",
+    "file": "assets/shaka-player.compiled-D8FAyrTb.js",
     "name": "shaka-player.compiled",
     "src": "node_modules/shaka-player/dist/shaka-player.compiled.js",
     "isDynamicEntry": true,
@@ -92,7 +113,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-CTo0jRyX.js",
+    "file": "assets/layout-segment-context-Uv6VV7Wm.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -103,7 +124,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-DiC261Rr.js",
+    "file": "assets/index-D4v1V0wF.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -113,6 +134,7 @@
     ],
     "dynamicImports": [
       "node_modules/vinext/dist/shims/layout-segment-context.js",
+      "app/event-player/EventPlayer.tsx",
       "virtual:vinext-app-browser-entry",
       "app/verification/media/MediaJourney.tsx",
       "app/verification/sources/SourceJourney.tsx",

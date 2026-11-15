@@ -1,5 +1,5 @@
 /* Shell cache only. Public catalogue uses its integrity-checked IndexedDB cache separately. */
-const CACHE = "streamverse-shell-4fd7928113cbbcff2740";
+const CACHE = "streamverse-shell-03c10ab2990d9a015e9a";
 const SHELL = [
   "/",
   "/offline.html",
@@ -9,7 +9,7 @@ const SHELL = [
   "/icons/icon-192.png",
   "/icons/icon-512.png",
   "/icons/maskable-512.png",
-  "/icons/apple-touch-icon.png", "/assets/EventPlayer-D4dFe8KT.js", "/assets/EventPlayer-DTd2dFdv.css", "/assets/MediaJourney-BrsxkmRz.js", "/assets/SourceJourney-DykDOO_P.js", "/assets/Viewer-9bt-dTHW.js", "/assets/Viewer-CuVrF80o.css", "/assets/browser-media-BH2_gcFM.js", "/assets/catalogue-client-NosFQAig.js", "/assets/discovery.worker-C3j7PlE7.js", "/assets/framework-CXnKph_e.js", "/assets/index-BHKMeiIU.js", "/assets/index-w5FRjuCy.css", "/assets/layout-segment-context-w-1-j4EX.js", "/assets/media-journey-C9gpGNwX.css", "/assets/playback-recovery-DkOo1JgC.js", "/assets/playback-session-CWY54DOh.js", "/assets/rolldown-runtime-S-ySWqyJ.js", "/assets/shaka-player.compiled-D8FAyrTb.js",
+  "/icons/apple-touch-icon.png", "/assets/EventPlayer-4o9I21lk.js", "/assets/EventPlayer-DTd2dFdv.css", "/assets/MediaJourney-DlN0otMe.js", "/assets/SourceJourney-Xl_e_ylp.js", "/assets/Viewer-528FX9TK.js", "/assets/Viewer-CuVrF80o.css", "/assets/browser-media-BV2PPrLp.js", "/assets/catalogue-client-CKtBFLE_.js", "/assets/discovery.worker-C3j7PlE7.js", "/assets/framework-CXnKph_e.js", "/assets/index-PTZuj0nr.js", "/assets/index-w5FRjuCy.css", "/assets/layout-segment-context-Tr2Io11E.js", "/assets/media-journey-C9gpGNwX.css", "/assets/playback-recovery-DkOo1JgC.js", "/assets/playback-session-CWY54DOh.js", "/assets/rolldown-runtime-S-ySWqyJ.js", "/assets/shaka-player.compiled-D8FAyrTb.js",
 ];
 const origin = self.location.origin;
 self.addEventListener("install", (event) => {

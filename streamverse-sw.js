@@ -1,5 +1,5 @@
 /* Shell cache only. Public catalogue uses its integrity-checked IndexedDB cache separately. */
-const CACHE = "streamverse-shell-e217217d3b92947a280d";
+const CACHE = "streamverse-shell-2d18bebb91f1149227e7";
 const SHELL = [
   "/",
   "/offline.html",
@@ -9,7 +9,7 @@ const SHELL = [
   "/icons/icon-192.png",
   "/icons/icon-512.png",
   "/icons/maskable-512.png",
-  "/icons/apple-touch-icon.png", "/assets/EventPlayer-DHbQbZVX.js", "/assets/EventPlayer-DTd2dFdv.css", "/assets/MediaJourney-BKuTfYvM.js", "/assets/SourceJourney-9NVOSamZ.js", "/assets/VerifiedYouTubePlayer-l8mxB_l6.js", "/assets/Viewer-CZ7f7_yc.css", "/assets/Viewer-DjOu1EFJ.js", "/assets/YouTubePagePlayer-DgU-Y2lg.css", "/assets/YouTubePagePlayer-vIPuXVcn.js", "/assets/browser-media-cx0a4VAM.js", "/assets/catalogue-client-CV9s020J.js", "/assets/discovery.worker-C3j7PlE7.js", "/assets/framework-CXnKph_e.js", "/assets/index-CH173DL_.js", "/assets/index-Dwc7wtW9.css", "/assets/layout-segment-context-BYCWdvmI.js", "/assets/media-journey-C9gpGNwX.css", "/assets/playback-recovery-D98CRrA9.js", "/assets/playback-session-CWY54DOh.js", "/assets/rolldown-runtime-S-ySWqyJ.js", "/assets/shaka-player.compiled-DuIvW-D5.js", "/assets/youtube-DjLa-AQ2.js",
+  "/icons/apple-touch-icon.png", "/assets/EventPlayer-C74ex2gr.js", "/assets/EventPlayer-DTd2dFdv.css", "/assets/MediaJourney-BWQYMxTY.js", "/assets/SourceJourney-CEGwtQo1.js", "/assets/VerifiedYouTubePlayer-l8mxB_l6.js", "/assets/Viewer-CSUopJ4L.js", "/assets/Viewer-CZ7f7_yc.css", "/assets/YouTubePagePlayer-DgU-Y2lg.css", "/assets/YouTubePagePlayer-vIPuXVcn.js", "/assets/browser-media-DuuWGP2e.js", "/assets/catalogue-client-CV9s020J.js", "/assets/discovery.worker-C3j7PlE7.js", "/assets/framework-CXnKph_e.js", "/assets/index-CmO8c-E1.js", "/assets/index-Dwc7wtW9.css", "/assets/layout-segment-context-CaIMHNLH.js", "/assets/media-journey-C9gpGNwX.css", "/assets/playback-recovery-D98CRrA9.js", "/assets/playback-session-CWY54DOh.js", "/assets/rolldown-runtime-S-ySWqyJ.js", "/assets/shaka-player.compiled-DuIvW-D5.js", "/assets/youtube-DjLa-AQ2.js",
 ];
 const origin = self.location.origin;
 self.addEventListener("install", (event) => {

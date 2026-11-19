@@ -1,6 +1,6 @@
 {
-  "_VerifiedYouTubePlayer-l8mxB_l6.js": {
-    "file": "assets/VerifiedYouTubePlayer-l8mxB_l6.js",
+  "_VerifiedYouTubePlayer-Thb-rHfl.js": {
+    "file": "assets/VerifiedYouTubePlayer-Thb-rHfl.js",
     "name": "VerifiedYouTubePlayer",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
@@ -8,20 +8,21 @@
       "_framework-CXnKph_e.js"
     ]
   },
-  "_browser-media-GAAyu8ni.js": {
-    "file": "assets/browser-media-GAAyu8ni.js",
+  "_browser-media-CJWjz_EZ.js": {
+    "file": "assets/browser-media-CJWjz_EZ.js",
     "name": "browser-media",
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
       "virtual:vinext-app-browser-entry",
+      "_runtime-playback-D2sZH4HQ.js",
       "_youtube-DjLa-AQ2.js"
     ],
     "dynamicImports": [
       "node_modules/shaka-player/dist/shaka-player.compiled.js"
     ]
   },
-  "_catalogue-client-CV9s020J.js": {
-    "file": "assets/catalogue-client-CV9s020J.js",
+  "_catalogue-client-HC4KSXCR.js": {
+    "file": "assets/catalogue-client-HC4KSXCR.js",
     "name": "catalogue-client",
     "imports": [
       "_youtube-DjLa-AQ2.js"
@@ -38,32 +39,55 @@
     "file": "assets/media-journey-C9gpGNwX.css",
     "src": "_media-journey-C9gpGNwX.css"
   },
-  "_playback-recovery-D98CRrA9.js": {
-    "file": "assets/playback-recovery-D98CRrA9.js",
+  "_playback-recovery-D1DgMcnn.js": {
+    "file": "assets/playback-recovery-D1DgMcnn.js",
     "name": "playback-recovery"
   },
   "_playback-session-CWY54DOh.js": {
     "file": "assets/playback-session-CWY54DOh.js",
     "name": "playback-session"
   },
+  "_premium-layout-BDWjmRZo.js": {
+    "file": "assets/premium-layout-BDWjmRZo.js",
+    "name": "premium-layout",
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_runtime-playback-D2sZH4HQ.js",
+      "_framework-CXnKph_e.js"
+    ],
+    "css": [
+      "assets/premium-layout-C1OmwlJS.css"
+    ]
+  },
+  "_premium-layout-C1OmwlJS.css": {
+    "file": "assets/premium-layout-C1OmwlJS.css",
+    "src": "_premium-layout-C1OmwlJS.css"
+  },
   "_rolldown-runtime-S-ySWqyJ.js": {
     "file": "assets/rolldown-runtime-S-ySWqyJ.js",
     "name": "rolldown-runtime"
+  },
+  "_runtime-playback-D2sZH4HQ.js": {
+    "file": "assets/runtime-playback-D2sZH4HQ.js",
+    "name": "runtime-playback",
+    "imports": [
+      "_youtube-DjLa-AQ2.js"
+    ]
   },
   "_youtube-DjLa-AQ2.js": {
     "file": "assets/youtube-DjLa-AQ2.js",
     "name": "youtube"
   },
   "app/event-player/EventPlayer.tsx": {
-    "file": "assets/EventPlayer-CH1lEeT6.js",
+    "file": "assets/EventPlayer-KoEdyAws.js",
     "name": "EventPlayer",
     "src": "app/event-player/EventPlayer.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_browser-media-GAAyu8ni.js",
+      "_browser-media-CJWjz_EZ.js",
       "_youtube-DjLa-AQ2.js",
-      "_playback-recovery-D98CRrA9.js",
+      "_playback-recovery-D1DgMcnn.js",
       "_playback-session-CWY54DOh.js",
       "_framework-CXnKph_e.js"
     ],
@@ -71,14 +95,25 @@
       "assets/EventPlayer-DTd2dFdv.css"
     ]
   },
+  "app/verification/branding/BrandingJourney.tsx": {
+    "file": "assets/BrandingJourney-BDR91_o3.js",
+    "name": "BrandingJourney",
+    "src": "app/verification/branding/BrandingJourney.tsx",
+    "isDynamicEntry": true,
+    "imports": [
+      "_rolldown-runtime-S-ySWqyJ.js",
+      "_premium-layout-BDWjmRZo.js",
+      "_framework-CXnKph_e.js"
+    ]
+  },
   "app/verification/media/MediaJourney.tsx": {
-    "file": "assets/MediaJourney-BwBUjglv.js",
+    "file": "assets/MediaJourney-Bog0pAe-.js",
     "name": "MediaJourney",
     "src": "app/verification/media/MediaJourney.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_browser-media-GAAyu8ni.js",
+      "_browser-media-CJWjz_EZ.js",
       "_youtube-DjLa-AQ2.js",
       "_playback-session-CWY54DOh.js",
       "_framework-CXnKph_e.js"
@@ -88,14 +123,14 @@
     ]
   },
   "app/verification/sources/SourceJourney.tsx": {
-    "file": "assets/SourceJourney-BzYBj8On.js",
+    "file": "assets/SourceJourney-DEh3OxJB.js",
     "name": "SourceJourney",
     "src": "app/verification/sources/SourceJourney.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_browser-media-GAAyu8ni.js",
-      "_catalogue-client-CV9s020J.js",
+      "_browser-media-CJWjz_EZ.js",
+      "_catalogue-client-HC4KSXCR.js",
       "_youtube-DjLa-AQ2.js",
       "_framework-CXnKph_e.js"
     ],
@@ -104,32 +139,34 @@
     ]
   },
   "app/viewer/Viewer.tsx": {
-    "file": "assets/Viewer-DTXIztQO.js",
+    "file": "assets/Viewer-B77ZKO4V.js",
     "name": "Viewer",
     "src": "app/viewer/Viewer.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_VerifiedYouTubePlayer-l8mxB_l6.js",
-      "_browser-media-GAAyu8ni.js",
-      "_catalogue-client-CV9s020J.js",
+      "_premium-layout-BDWjmRZo.js",
+      "_VerifiedYouTubePlayer-Thb-rHfl.js",
+      "_runtime-playback-D2sZH4HQ.js",
+      "_browser-media-CJWjz_EZ.js",
+      "_catalogue-client-HC4KSXCR.js",
       "_youtube-DjLa-AQ2.js",
-      "_playback-recovery-D98CRrA9.js",
+      "_playback-recovery-D1DgMcnn.js",
       "_playback-session-CWY54DOh.js",
       "_framework-CXnKph_e.js"
     ],
     "css": [
-      "assets/Viewer-CWeJKc7S.css"
+      "assets/Viewer-qU9VPzZF.css"
     ]
   },
   "app/youtube-player/YouTubePagePlayer.tsx": {
-    "file": "assets/YouTubePagePlayer-vIPuXVcn.js",
+    "file": "assets/YouTubePagePlayer-DUI2z9XH.js",
     "name": "YouTubePagePlayer",
     "src": "app/youtube-player/YouTubePagePlayer.tsx",
     "isDynamicEntry": true,
     "imports": [
       "_rolldown-runtime-S-ySWqyJ.js",
-      "_VerifiedYouTubePlayer-l8mxB_l6.js",
+      "_VerifiedYouTubePlayer-Thb-rHfl.js",
       "_youtube-DjLa-AQ2.js",
       "_framework-CXnKph_e.js"
     ],
@@ -138,7 +175,7 @@
     ]
   },
   "node_modules/shaka-player/dist/shaka-player.compiled.js": {
-    "file": "assets/shaka-player.compiled-DuIvW-D5.js",
+    "file": "assets/shaka-player.compiled-DtdoITds.js",
     "name": "shaka-player.compiled",
     "src": "node_modules/shaka-player/dist/shaka-player.compiled.js",
     "isDynamicEntry": true,
@@ -147,7 +184,7 @@
     ]
   },
   "node_modules/vinext/dist/shims/layout-segment-context.js": {
-    "file": "assets/layout-segment-context-Bh26vMmB.js",
+    "file": "assets/layout-segment-context-DWS6gc9_.js",
     "name": "layout-segment-context",
     "src": "node_modules/vinext/dist/shims/layout-segment-context.js",
     "isDynamicEntry": true,
@@ -158,7 +195,7 @@
     ]
   },
   "virtual:vinext-app-browser-entry": {
-    "file": "assets/index-BeZQpzuZ.js",
+    "file": "assets/index-DvyFkizB.js",
     "name": "index",
     "src": "virtual:vinext-app-browser-entry",
     "isEntry": true,
@@ -173,6 +210,7 @@
       "virtual:vinext-app-browser-entry",
       "app/verification/media/MediaJourney.tsx",
       "app/verification/sources/SourceJourney.tsx",
+      "app/verification/branding/BrandingJourney.tsx",
       "app/viewer/Viewer.tsx"
     ]
   }

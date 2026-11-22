@@ -1,0 +1,1 @@
+import{r as e}from"./framework-CXnKph_e.js";import{Viewer as t}from"./Viewer-VXiP2WlT.js";var n=e(),r=()=>({width:innerWidth,height:innerHeight,coarsePointer:!0,touchPoints:1,userAgent:`Android`});function i(){return(0,n.jsx)(t,{cataloguePath:`/__verification/catalogue/`,orientationEnvironment:r})}export{i as OrientationJourney};

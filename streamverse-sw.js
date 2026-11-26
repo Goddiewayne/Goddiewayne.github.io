@@ -1,5 +1,5 @@
 /* Shell cache only. Public catalogue uses its integrity-checked IndexedDB cache separately. */
-const CACHE = "streamverse-shell-58d0e2273285534bb111";
+const CACHE = "streamverse-shell-020b832119b698591db6";
 const SHELL = [
   "/",
   "/offline.html",
@@ -9,7 +9,7 @@ const SHELL = [
   "/icons/icon-192.png",
   "/icons/icon-512.png",
   "/icons/maskable-512.png",
-  "/icons/apple-touch-icon.png", "/assets/BrandingJourney-w2CsIPpo.js", "/assets/ChannelBranding-Ba_7Oxda.css", "/assets/ChannelBranding-D0m1SfRu.js", "/assets/ConnectionEmblem-BQaSMrr6.js", "/assets/EventPlayer-DSLeThzJ.js", "/assets/EventPlayer-DTd2dFdv.css", "/assets/MediaJourney-B6KzhfXB.js", "/assets/OrientationJourney-BC0RbnsX.js", "/assets/SourceJourney-Dey99knj.js", "/assets/VerifiedYouTubePlayer-CQNF5kve.js", "/assets/Viewer-B3Oqu_Br.js", "/assets/Viewer-KXw_J3Zo.css", "/assets/YouTubePagePlayer-COflomRR.js", "/assets/YouTubePagePlayer-DgU-Y2lg.css", "/assets/branding.worker-CqmUICFU.js", "/assets/browser-media-CYxK91aS.js", "/assets/catalogue-client-Z61YsfRz.js", "/assets/discovery.worker-BEwgPMOe.js", "/assets/framework-CXnKph_e.js", "/assets/index-CcHCXyQh.css", "/assets/index-iOY1RbLH.js", "/assets/layout-segment-context-CE6zClh9.js", "/assets/media-journey-C9gpGNwX.css", "/assets/playback-recovery-Cr6b0HnF.js", "/assets/playback-session-CWY54DOh.js", "/assets/premium-layout-M3nIZ8U3.css", "/assets/premium-layout-VThpAJ6H.js", "/assets/rolldown-runtime-S-ySWqyJ.js", "/assets/runtime-playback-KwX_wqAN.js", "/assets/shaka-player.compiled-D9u3wLNA.js", "/assets/youtube-Ci1x5ica.js",
+  "/icons/apple-touch-icon.png", "/assets/BrandingJourney-w2CsIPpo.js", "/assets/ChannelBranding-Ba_7Oxda.css", "/assets/ChannelBranding-D0m1SfRu.js", "/assets/ConnectionEmblem-BQaSMrr6.js", "/assets/EventPlayer-DB7mNrv0.js", "/assets/EventPlayer-DTd2dFdv.css", "/assets/MediaJourney-CSMEjO66.js", "/assets/OrientationJourney-BFWilgTp.js", "/assets/SourceJourney-CVZ8a33i.js", "/assets/VerifiedYouTubePlayer-CQNF5kve.js", "/assets/Viewer-DKCMg4m1.js", "/assets/Viewer-KXw_J3Zo.css", "/assets/YouTubePagePlayer-COflomRR.js", "/assets/YouTubePagePlayer-DgU-Y2lg.css", "/assets/branding.worker-CqmUICFU.js", "/assets/browser-media-a4fn1PMS.js", "/assets/catalogue-client-Z61YsfRz.js", "/assets/discovery.worker-BEwgPMOe.js", "/assets/framework-CXnKph_e.js", "/assets/index-CO7Owi39.js", "/assets/index-CcHCXyQh.css", "/assets/layout-segment-context-CTFqqEXA.js", "/assets/media-journey-C9gpGNwX.css", "/assets/playback-recovery-Cr6b0HnF.js", "/assets/playback-session-CWY54DOh.js", "/assets/premium-layout-M3nIZ8U3.css", "/assets/premium-layout-VThpAJ6H.js", "/assets/rolldown-runtime-S-ySWqyJ.js", "/assets/runtime-playback-KwX_wqAN.js", "/assets/shaka-player.compiled-D9u3wLNA.js", "/assets/youtube-Ci1x5ica.js",
 ];
 const origin = self.location.origin;
 self.addEventListener("install", (event) => {
